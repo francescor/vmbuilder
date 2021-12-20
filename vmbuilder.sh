@@ -646,7 +646,7 @@ qm set $VMID --ide2 $vmstorage:cloudinit
 # make it boot hard drive only
 qm set $VMID --boot c --bootdisk scsi0
 
-qm set $VMID --serial0 socket --vga serial0
+qm set $VMID --serial0 socket --vga qxl
 
 #Here we are going to set the network stuff from above
 if [[ $DHCPYESORNO =~ ^[Yy]$ || $DHCPYESORNO =~ ^[yY][eE][sS] ]]
